@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0040)https://zingy-bonbon-a01fd3.netlify.app/ -->
+<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=7f12c4f5-6fc9-4755-8d28-e728bc010b9c
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=7f12c4f5-6fc9-4755-8d28-e728bc010b9c">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bora Doruk Can&#39;in kisisel web sitesi ve projeleri.">
+    <title>Bora Doruk Can</title>
+    <link rel="stylesheet" href="./Bora_Doruk_CAN_Files/site.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="https://zingy-bonbon-a01fd3.netlify.app/">BORA DORUK CAN</a>
+        <nav aria-label="Ana navigasyon">
+            <a href="https://zingy-bonbon-a01fd3.netlify.app/#projeler">Projeler</a>
+            <a href="https://zingy-bonbon-a01fd3.netlify.app/kartvizit/">Kartvizit</a>
+            <a class="nav-contact" href="mailto:boradorukcan@gmail.com">Iletisim</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <p class="eyebrow">Kisisel web sitesi</p>
+            <h1>Fikirleri kullanisli<br>yazilimlara donusturuyorum.</h1>
+            <p class="intro">Bilgisayar muhendisligi ogrencisi. Web teknolojileri, yazilim gelistirme ve urun odakli projeler uzerinde calisiyorum.</p>
+            <div class="hero-actions">
+                <a class="button primary" href="https://zingy-bonbon-a01fd3.netlify.app/kartvizit/">Kartvizitimi gor</a>
+                <a class="button secondary" href="https://zingy-bonbon-a01fd3.netlify.app/#projeler">Projeler</a>
+            </div>
+        </section>
+        <section class="projects" id="projeler">
+            <div class="section-heading"><p class="eyebrow">Secili calismalar</p><h2>Projeler</h2></div>
+            <div class="project-grid">
+                <a class="project-card card-profile" href="https://zingy-bonbon-a01fd3.netlify.app/kartvizit/"><span class="card-number">01</span><h3>Dijital Kartvizit</h3><p>Hakkimda, deneyimlerim ve iletisim bilgilerim.</p><span class="card-link">Goruntule -&gt;</span></a>
+                <a class="project-card card-admin" href="https://zingy-bonbon-a01fd3.netlify.app/adminpanel/"><span class="card-number">02</span><h3>Admin Panel</h3><p>Urun, siparis ve musteri yonetimi arayuzu.</p><span class="card-link">Goruntule -&gt;</span></a>
+            </div>
+        </section>
+    </main>
+    <footer><span>© <span id="year">2026</span> Bora Doruk Can</span><a href="https://github.com/boradorukcan48" target="_blank" rel="noopener">GitHub</a></footer>
+    <script src="./Bora_Doruk_CAN_Files/site.js.indir"></script>
+
+
+<script async="" src="./Bora_Doruk_CAN_Files/hud" data-nf-variant="public" data-netlify-site-id="7f12c4f5-6fc9-4755-8d28-e728bc010b9c" data-app-host="app.netlify.com"></script>
+<iframe id="nl-badge-frame" title="Powered by Netlify" style="position: fixed; bottom: 0px; right: 0px; border: 0px; margin: 0px; padding: 0px; background: transparent; z-index: 2147483645; width: 197px; height: 64px; clip-path: path(&quot;M 3 3 H 184 V 51 H 3 Z&quot;);" data-nl-ready="1" src="./Bora_Doruk_CAN_Files/saved_resource.html"></iframe></body></html>

@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yönetici Paneli - Gösterge Paneli</title>
+    <!-- Site styles (Absolute paths) -->
+    <link rel="stylesheet" href="common/css/variables.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/components.css">
+    <link rel="stylesheet" href="common/css/index.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-mark">AP</div>
+            <div class="brand-text">Admin Panel</div>
+        </div>
+
+        <div class="nav-section">Genel</div>
+        <a href="#" class="nav-item active" data-page="dashboard" onclick="showPage('dashboard', event)">🏠 Dashboard</a>
+        <a href="#" class="nav-item" data-page="urunler" onclick="showPage('urunler', event)">📦 Ürünler</a>
+        <a href="#" class="nav-item" data-page="siparisler" onclick="showPage('siparisler', event)">🧾 Siparişler</a>
+        <a href="#" class="nav-item" data-page="musteriler" onclick="showPage('musteriler', event)">👤 Müşteriler</a>
+        <a href="#" class="nav-item" data-page="ayarlar" onclick="showPage('ayarlar', event)">⚙️ Ayarlar</a>
+    </aside>
+
+    <main class="main">
+        <!-- DASHBOARD PAGE -->
+        <div id="dashboard" class="page active">
+            <div class="topbar">
+                <h1 class="topbar-title">Dashboard</h1>
+                <div class="topbar-actions">
+                    <span class="pill">Yönetici</span>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card primary">
+                    <div>
+                        <h3>Yönetici Paneli</h3>
+                        <p>Yönetim paneline hoş geldiniz.</p>
+                    </div>
+                    <div class="card-icon">📊</div>
+                </div>
+
+                <div class="card success clickable-card" onclick="showPage('urunler', event)">
+                    <div>
+                        <h3>Ürünler</h3>
+                        <p>Ürün kayıtlarını yönetin.</p>
+                    </div>
+                    <div class="card-icon">📦</div>
+                </div>
+
+                <div class="card warning clickable-card" onclick="showPage('siparisler', event)">
+                    <div>
+                        <h3>Siparişler</h3>
+                        <p>Gönderim ve ödemeleri takip edin.</p>
+                    </div>
+                    <div class="card-icon">🧾</div>
+                </div>
+
+                <div class="card info clickable-card" onclick="showPage('musteriler', event)">
+                    <div>
+                        <h3>Müşteriler</h3>
+                        <p>Kayıtlı kullanıcıları inceleyin.</p>
+                    </div>
+                    <div class="card-icon">👤</div>
+                </div>
+
+                <div class="card secondary clickable-card" onclick="showPage('ayarlar', event)">
+                    <div>
+                        <h3>Ayarlar</h3>
+                        <p>Panel ayarlarını yönetin.</p>
+                    </div>
+                    <div class="card-icon">⚙️</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÜRÜNLER PAGE -->
+        <div id="urunler" class="page">
+            <div class="topbar">
+                <h1 class="topbar-title">Ürünler</h1>
+                <div class="topbar-actions">
+                    <span class="pill">Yönetici</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card-header">
+                    <h2>Ürün Listesi</h2>
+                    <button class="btn-primary" onclick="openNewProductModal()">+ Yeni Ürün</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Ürün Adı</th>
+                                <th>Kategori</th>
+                                <th>Fiyat</th>
+                                <th>Stok</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JavaScript dinamik basacak -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SİPARİŞLER PAGE -->
+        <div id="siparisler" class="page">
+            <div class="topbar">
+                <h1 class="topbar-title">Siparişler</h1>
+                <div class="topbar-actions">
+                    <span class="pill">Yönetici</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card-header">
+                    <h2>Sipariş Listesi</h2>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sipariş No</th>
+                                <th>Müşteri</th>
+                                <th>Tutar</th>
+                                <th>Durum</th>
+                                <th>Tarih</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#OWO67890</td>
+                                <td>Mariye Ece</td>
+                                <td>₺1499.99</td>
+                                <td><span class="badge warning">Kargoda</span></td>
+                                <td>31.08.2026</td>
+                            </tr>
+                            <tr>
+                                <td>#UWU12345</td>
+                                <td>Bora Doruk Can</td>
+                                <td>₺2199.99</td>
+                                <td><span class="badge success">Tamamlandı</span></td>
+                                <td>01.09.2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- MÜŞTERİLER PAGE -->
+        <div id="musteriler" class="page">
+            <div class="topbar">
+                <h1 class="topbar-title">Müşteriler</h1>
+                <div class="topbar-actions">
+                    <span class="pill">Yönetici</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card-header">
+                    <h2>Müşteri Listesi</h2>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Ad Soyad</th>
+                                <th>E-Posta</th>
+                                <th>Telefon</th>
+                                <th>Toplam Sipariş</th>
+                                <th>Katılım Tarihi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mariye Ece</td>
+                                <td>mariyeece@gmail.com</td>
+                                <td>+90 386 234 56 78</td>
+                                <td>3</td>
+                                <td>19.05.2026</td>
+                            </tr>
+                            <tr>
+                                <td>Bora Doruk Can</td>
+                                <td>boradorukcan@gmail.com</td>
+                                <td>+90 212 234 56 78</td>
+                                <td>5</td>
+                                <td>28.10.2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- AYARLAR PAGE -->
+        <div id="ayarlar" class="page">
+            <div class="topbar">
+                <h1 class="topbar-title">Ayarlar</h1>
+                <div class="topbar-actions">
+                    <span class="pill">Yönetici</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card-header">
+                    <h2>Panel Ayarları</h2>
+                </div>
+
+                <div class="form-section">
+                    <h3>Genel Ayarlar</h3>
+                    <div class="form-group">
+                        <label>Site Adı</label>
+                        <input type="text" value="AdminPanel" class="form-input" />
+                    </div>
+                    <div class="form-group">
+                        <label>E-Posta</label>
+                        <input type="email" value="admin@panel.com" class="form-input" />
+                    </div>
+                    <button class="btn-primary">Kaydet</button>
+                </div>
+
+                <div class="form-section">
+                    <h3>Güvenlik</h3>
+                    <div class="form-group">
+                        <label>Şifre Değiştir</label>
+                        <input type="password" placeholder="Yeni şifre" class="form-input" />
+                    </div>
+                    <button class="btn-primary">Güncelle</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL FOR EDIT/ADD PRODUCT -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Ürün Düzenle</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="form-group">
+                        <label>Ürün Adı</label>
+                        <input type="text" id="productName" class="form-input" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <input type="text" id="productCategory" class="form-input" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Fiyat (₺)</label>
+                        <input type="number" id="productPrice" class="form-input" step="0.01" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Stok</label>
+                        <input type="number" id="productStock" class="form-input" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-small" onclick="closeModal()">İptal</button>
+                <button class="btn-primary" onclick="saveProduct()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Harici JS Bağlantısı -->
+    <script src="common/js/index.js"></script>
+</body>
+</html>

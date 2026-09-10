@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <!-- Karakter Kodlaması (Character Encoding) -->
+    <meta charset="UTF-8">
+
+    <!-- Duyarlı / Esnek Tasarım (Responsive Design) -->
+    <meta name="viewport" 
+          content="width=device-width, 
+          initial-scale=1.0">
+
+    <!-- Arama Motoru Açıklaması (Search Engine Optimization [SEO]) -->
+    <meta name="description"
+          content="Bora Doruk CAN'ın kişisel kartvizit sayfası.">
+
+    <!-- Arama motorlarına bu sayfayı dizine ekleyebileceklerini söyleyin. -->
+    <meta name="robots" 
+          content="index, follow">
+
+    <!-- Sayfa Başlığı (Page Title) -->
+    <title>Bora Doruk CAN | Kartvizit</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="icon" type="image/svg+xml" href="common/images/logo.svg">
+
+    <!-- Kendi CSS dosyalarımız -->
+    <link rel="stylesheet" href="common/css/components.css">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/index.css">
+    <link rel="stylesheet" href="common/css/variables.css">
+</head>
+
+<body>
+
+<main class="kartvizit">
+
+    <div class="container language-bar">
+        <button
+            id="languageToggle"
+            class="btn btn-sm btn-outline-secondary"
+            type="button"
+            aria-label="Change language"
+        >
+            <i class="bi bi-translate" aria-hidden="true"></i>
+            <span id="languageToggleLabel">English</span>
+        </button>
+    </div>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Sol Taraf -->
+            <aside class="col-md-4">
+                
+                <section class="profile-card">
+
+
+                <!-- Profil Fotoğrafı -->
+                <div class="profile-image-wrapper">
+
+                    <img 
+                        src="common/images/profile.jpeg"
+                        alt="Profil Fotoğrafı"
+                        class="profile-image"
+                    >
+                    
+                </div>
+
+                <!-- İsim -->
+                <h1 class="profile-name">
+                    Bora Doruk CAN
+                </h1>
+
+                <!-- Meslek -->
+                <p class="profile-job">
+                    <span data-i18n="profile.job">Bilgisayar Mühendisliği Öğrencisi</span><br>
+                    <span data-i18n="profile.location">İstanbul, Türkiye</span>
+                </p>
+
+                <!-- İletişim -->
+                <div class="profile-contact">
+
+                    <a
+                        href="mailto:boradorukcan@gmail.com"
+                        class="contact-link"
+                        data-tooltip="E-Posta"
+                        title="E-Posta"
+                    >
+                        <i class="bi bi-envelope" aria-hidden="true"></i>
+                        <span class="visually-hidden" data-i18n="contact.email">E-Posta</span>
+                    </a>
+
+                    <a
+                        href="tel:+905050954848"
+                        class="contact-link"
+                        data-tooltip="Telefon"
+                        title="Telefon"
+                    >
+                        <i class="bi bi-telephone" aria-hidden="true"></i>
+                        <span class="visually-hidden" data-i18n="contact.phone">Telefon</span>
+                    </a>
+
+                    <a 
+                        href="https://www.linkedin.com/in/bora-doruk-can-005a7b293/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link"
+                        data-tooltip="LinkedIn"
+                        title="LinkedIn"
+                    >
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        <span class="visually-hidden">LinkedIn</span>
+                    </a>
+
+                    <a 
+                        href="https://github.com/boradorukcan48"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link"
+                        data-tooltip="GitHub"
+                        title="GitHub"
+                    >
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                        <span class="visually-hidden">GitHub</span>
+                    </a>
+
+                </div>
+
+                </section>
+
+            </aside>
+
+            <!-- Sağ Taraf -->
+            <section class="col-md-8">
+
+                    <div class="content-card">
+
+                        <!-- Accordion -->
+                        <div
+                            class="accordion"
+                            id="aboutAccordion"
+                        >
+                    
+                        <!-- Hakkımda -->
+                        <div class="accordion-item">
+
+                            <h2
+                                class="accordion-header"
+                                id="headingAbout"
+                            >
+                        
+                                <button
+                                    class="accordion-button collapsed fw-bold"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#about"
+                                    aria-expanded="false"
+                                    aria-controls="about"
+                                >
+                                    <span data-i18n="accordion.about">Hakkımda</span>
+                                </button>
+                        
+                            </h2>
+
+                            <div
+                                id="about"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingAbout"
+                                data-bs-parent="#aboutAccordion"
+                            >
+                                <div class="accordion-body">
+
+                                    <p class="small mb-0">
+                                        <span data-i18n-html="about.body">Kadir Has Üniversitesi 4. sınıf bilgisayar mühendisliği 
+                                        öğrencisiyim. Gömülü sistemler, mühendislik simülasyonları, 
+                                        veri/sistem analizi ve modern web teknolojileri odağında 
+                                        projelere imza atıyorum. Donanımdan web mimarilerine kadar 
+                                        uzanan çok yönlü bakış açımla karmaşık mühendislik 
+                                        problemlerine pratik yazılım çözümleri getiriyorum. <br><br>
+
+                                        Ürün odaklı yaklaşımımın bir parçası olarak, şu sıralar 
+                                        kullanıcıların hayatını kolaylaştıracak bir online 
+                                        kartvizit projesi geliştiriyorum. Bu projede, kullanıcıların 
+                                        dijital kartvizitlerini oluşturup paylaşmalarını sağlayacak 
+                                        bir platform sunmayı hedefliyorum. Ayrıca, mühendislik 
+                                        yazılımları ve yazılım geliştirme süreçlerinde de aktif 
+                                        olarak yer alıyorum.</span>
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Deneyim & Eğitim-->
+                        <div class="accordion-item timeline-tabs-item">
+
+                            <h2 class="accordion-header" id="headingExperienceEducation">
+                                <button
+                                    class="accordion-button collapsed fw-bold"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#experienceEducation"
+                                    aria-expanded="false"
+                                    aria-controls="experienceEducation"
+                                >
+                                    <span data-i18n="accordion.experience">Eğitim, Deneyim, Projeler & Kulüpler</span>
+                                </button>
+                            </h2>
+
+                            <div
+                                id="experienceEducation"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingExperienceEducation"
+                                data-bs-parent="#aboutAccordion"
+                            >
+                                <div class="timeline-tabs-content">
+                                <div class="accordion-body">
+
+                                    <ul class="nav nav-tabs timeline-tabs" id="timelineTabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-pane" type="button" role="tab" aria-controls="education-pane" aria-selected="true">
+                                                <span data-i18n="tabs.education">Eğitim</span>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience-pane" type="button" role="tab" aria-controls="experience-pane" aria-selected="false">
+                                                <span data-i18n="tabs.experience">Deneyim</span>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-pane" type="button" role="tab" aria-controls="projects-pane" aria-selected="false">
+                                                <span data-i18n="tabs.projects">Projeler</span>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="clubs-tab" data-bs-toggle="tab" data-bs-target="#clubs-pane" type="button" role="tab" aria-controls="clubs-pane" aria-selected="false">
+                                                <span data-i18n="tabs.clubs">Kulüpler</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content timeline-tab-content" id="timelineTabContent">
+                                        <div class="tab-pane fade show active" id="education-pane" role="tabpanel" aria-labelledby="education-tab"></div>
+                                        <div class="tab-pane fade" id="experience-pane" role="tabpanel" aria-labelledby="experience-tab"></div>
+                                        <div class="tab-pane fade" id="projects-pane" role="tabpanel" aria-labelledby="projects-tab"></div>
+                                        <div class="tab-pane fade" id="clubs-pane" role="tabpanel" aria-labelledby="clubs-tab">
+                                            <div class="club-entry">
+                                                <h3 class="h6 small mb-1 fw-bold" data-i18n="clubs.ataturk.title">Kadir Has Üniversitesi Atatürkçü Gençlik Kulübü</h3>
+                                                <p class="text-muted small mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i> <span data-i18n="clubs.date">2023 — Halen</span></p>
+                                                <p class="small mb-0" data-i18n="clubs.description">Kulübün gelişmelerini ve düzenlediği buluşmaları takip ediyor, etkinliklerine aktif olarak katılıyorum.</p>
+                                            </div>
+                                            <hr class="my-3">
+                                            <div class="club-entry">
+                                                <h3 class="h6 small mb-1 fw-bold" data-i18n="clubs.fenerbahce.title">Kadir Has Üniversitesi Fenerbahçe Kulübü</h3>
+                                                <p class="text-muted small mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i> <span data-i18n="clubs.date">2023 — Halen</span></p>
+                                                <p class="small mb-0" data-i18n="clubs.description">Kulübün gelişmelerini ve düzenlediği buluşmaları takip ediyor, etkinliklerine aktif olarak katılıyorum.</p>
+                                            </div>
+                                            <hr class="my-3">
+                                            <div class="club-entry">
+                                                <h3 class="h6 small mb-1 fw-bold" data-i18n="clubs.running.title">Kadir Has Üniversitesi Koşu Kulübü</h3>
+                                                <p class="text-muted small mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i> <span data-i18n="clubs.date">2023 — Halen</span></p>
+                                                <p class="small mb-0" data-i18n="clubs.description">Kulübün gelişmelerini ve düzenlediği buluşmaları takip ediyor, etkinliklerine aktif olarak katılıyorum.</p>
+                                            </div>
+                                            <hr class="my-3">
+                                            <div class="club-entry">
+                                                <h3 class="h6 small mb-1 fw-bold" data-i18n="clubs.engineering.title">Kadir Has Üniversitesi Mühendislik Kulübü</h3>
+                                                <p class="text-muted small mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i> <span data-i18n="clubs.date">2023 — Halen</span></p>
+                                                <p class="small mb-0" data-i18n="clubs.description">Kulübün gelişmelerini ve düzenlediği buluşmaları takip ediyor, etkinliklerine aktif olarak katılıyorum.</p>
+                                            </div>
+                                            <hr class="my-3">
+                                            <div class="club-entry">
+                                                <h3 class="h6 small mb-1 fw-bold" data-i18n="clubs.music.title">Kadir Has Üniversitesi Müzik Kulübü</h3>
+                                                <p class="text-muted small mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i> <span data-i18n="clubs.date">2023 — Halen</span></p>
+                                                <p class="small mb-0" data-i18n="clubs.description">Kulübün gelişmelerini ve düzenlediği buluşmaları takip ediyor, etkinliklerine aktif olarak katılıyorum.</p>
+                                            </div>
+                                            <hr class="my-3">
+                                            <div class="club-entry">
+                                                <h3 class="h6 small mb-1 fw-bold" data-i18n="clubs.chess.title">Kadir Has Üniversitesi Satranç Kulübü</h3>
+                                                <p class="text-muted small mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i> <span data-i18n="clubs.date">2023 — Halen</span></p>
+                                                <p class="small mb-0" data-i18n="clubs.description">Kulübün gelişmelerini ve düzenlediği buluşmaları takip ediyor, etkinliklerine aktif olarak katılıyorum.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Eğitim -->
+                                    <div class="timeline-entry mb-4" data-category="education" data-sort-year="2023" data-sort-title="Bilgisayar Mühendisliği" data-sort-priority="1">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="education.title">Bilgisayar Mühendisliği (%100 İngilizce)</span>
+                                        </h3>
+
+                                        <p class="h6 small mb-1">
+                                            <span data-i18n="education.school">Kadir Has Üniversitesi</span>
+                                        </p>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="education.date">2023 — Devam Etmekte (4. Sınıf %50 Burslu)</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="education.description">MÜDEK ve EUR-ACE akreditasyonlarına sahip program kapsamında; 
+                                            algoritmalar, veri yapıları, yazılım geliştirme ve mühendislik 
+                                            temelleri üzerine %100 İngilizce eğitim alıyorum.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Güncel Proje -->
+                                    <div class="timeline-entry mb-4" data-category="projects" data-sort-year="2026" data-sort-title="Bağımsız Yazılım Geliştirici">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.online.title">Bağımsız Yazılım Geliştirici — Online Kartvizit Platformu</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.online.date">2026 — Halen</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.online.description">Modern web teknolojileri (HTML5, CSS3, JavaScript, Bootstrap) 
+                                            kullanarak kullanıcıların dijital profillerini 
+                                            sergileyebilecekleri esnek (responsive) ve etkileşimli bir 
+                                            platform geliştiriyorum.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Yazılım ve Algoritma -->
+                                    <div class="timeline-entry mb-4" data-category="experience" data-sort-year="2023" data-sort-title="Yazılım ve Algoritma Geliştirme Çalışmaları">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.algorithm.title">Yazılım & Algoritma Geliştirme Çalışmaları</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.algorithm.date">2023 — Halen</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.algorithm.description">Python, C ve C++ dillerinde string manipülasyonu, 
+                                            matris sıralama (Bubble Sort) ve pointer kullanımı 
+                                            ile modüler yapılar oluşturdum. Struct ve dosya işlemleri 
+                                            (File I/O) kullanarak menü tabanlı bir Araç Yönetim Sistemi 
+                                            geliştirdim.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- FSM Fabrika Kontrol -->
+                                    <div class="timeline-entry mb-4" data-category="projects" data-sort-year="2025" data-sort-title="Mealy FSM Tabanlı Fabrika Üretim Kontrol Sistemi">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.factory.title">Mealy FSM Tabanlı Fabrika Üretim Kontrol Sistemi</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.factory.date">2025</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.factory.description">Üretim hattı kontrolü için Mealy FSM tabanlı sıralı lojik 
+                                            sistem tasarladım. Karnaugh map ve D flip-flop optimizasyonları 
+                                            ile gecikmeleri azaltıp MATLAB/Simulink & Stateflow
+                                            simülasyonlarıyla doğruladım.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Akıllı Otobüs Rota Seçim Sistemi -->
+                                    <div class="timeline-entry mb-4" data-category="projects" data-sort-year="2025" data-sort-title="Akıllı Otobüs Rota Seçim Sistemi">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.bus.title">Akıllı Otobüs Rota Seçim Sistemi</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.bus.date">2025</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.bus.description">Gerçek dünya rota problemlerini binary formatta modelleyen 
+                                            kombinasyonel lojik sistem geliştirdim. Karnaugh map 
+                                            sadeleştirmeleri ve lojik kapı optimizasyonunun ardından 
+                                            MATLAB/Simulink simülasyonları ve donanım doğrulamalarını 
+                                            gerçekleştirdim.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Konvolüsyonel Kodlayıcı -->
+                                    <div class="timeline-entry mb-4" data-category="projects" data-sort-year="2024" data-sort-title="Konvolüsyonel Kodlayıcı Tasarımı">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.encoder.title">Konvolüsyonel Kodlayıcı Tasarımı</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.encoder.date">2024</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.encoder.description">FSM tabanlı yapı ve XOR kapıları ile veri iletim güvenilirliğini 
+                                            artıran kodlayıcı tasarladım. Flip-flop yapılarını optimize edip 
+                                            MATLAB/Simulink ve Logic Analyzer ile gerçek zamanlı doğrulama 
+                                            yaptım.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Işık Kontrol Sistemi -->
+                                    <div class="timeline-entry mb-4" data-category="projects" data-sort-year="2024" data-sort-title="Mantar Yetiştirme İçin Işık Yoğunluğu Kontrol Sistemi">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.light.title">Mantar Yetiştirme İçin Işık Yoğunluğu Kontrol Sistemi</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.light.date">2024</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.light.description">Lojik devreler, Truth Table ve Karnaugh Map analizleri kullanarak 
+                                            optimum ışık kontrol sistemi tasarladım ve LED tabanlı donanım 
+                                            üzerinde doğruladım.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Elektronik Lab/Devre -->
+                                    <div class="timeline-entry mb-4" data-category="projects" data-sort-year="2024" data-sort-title="Devre Analizi ve Ölçüm Çalışmaları">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.circuit.title">Devre Analizi & Ölçüm Çalışmaları</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.circuit.date">2024 — 2025</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.circuit.description">Wheatstone köprüsü ile deneysel direnç ölçümleri gerçekleştirip 
+                                            Thevenin/Norton eşdeğer devre analizleriyle teorik ve pratik 
+                                            karşılaştırmalar yaptım. İki kapılı ağlarda Z-parametre analizleri 
+                                            uyguladım.</span>
+                                        </p>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Toplumsal Sorumluluk Projesi -->
+                                    <div class="timeline-entry mb-0" data-category="experience" data-sort-year="2025" data-sort-title="Ekip Üyesi Toplumsal Sorumluluk Projesi">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="experience.community.title">Ekip Üyesi — Toplumsal Sorumluluk Projesi</span>
+                                        </h3>
+
+                                        <p class="text-muted small mb-2">
+                                            <i class="bi bi-calendar3">
+                                            </i> 
+                                            <span data-i18n="experience.community.date">2025</span>
+                                        </p>
+
+                                        <p class="small mb-0">
+                                            <span data-i18n="experience.community.description">İlkokul öğrencilerine yönelik sosyal ve eğitici etkinliklerde 
+                                            görev alarak ekip içi koordinasyon, zaman yönetimi ve iletişim 
+                                            süreçlerini aktif şekilde yürüttüm.</span>
+                                        </p>
+
+                                    </div>
+                    
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Sertifikalar & Beceriler -->
+                        <div class="accordion-item">
+
+                            <h2
+                                class="accordion-header"
+                                id="headingCertificatesSkills"
+                            >
+                                <button
+                                    class="accordion-button collapsed fw-bold"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#certificatesSkills"
+                                    aria-expanded="false"
+                                    aria-controls="certificatesSkills"
+                                >
+                                    <span data-i18n="accordion.certificates">Sertifikalar & Beceriler</span>
+                                </button>
+                            </h2>
+
+                            <div
+                                id="certificatesSkills"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingCertificatesSkills"
+                                data-bs-parent="#aboutAccordion"
+                            >
+                                <div class="accordion-body">
+
+                                    <!-- Sertifikalar -->
+                                    <div class="mb-4">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="certificates.title">Sertifikalar</span>
+                                        </h3>
+
+                                        <ul class="small mb-0">
+                                            <li data-i18n="certificates.careerDays">17. Kariyer Günleri Katılım Sertifikası — Marmara Üniversitesi Endüstri Mühendisliği Kulübü (MIES), LC Waikiki ana sponsorluğunda</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <hr class="my-3">
+
+                                    <!-- Beceriler -->
+                                    <div class="mb-0">
+
+                                        <h3 class="h6 small mb-1 fw-bold">
+                                            <span data-i18n="skills.title">Teknik Beceriler</span>
+                                        </h3>
+
+                                        <ul class="small mb-0">
+                                            <li data-i18n="skills.html">HTML, CSS ve Bootstrap</li>
+                                            <li data-i18n="skills.javascript">JavaScript</li>
+                                            <li data-i18n="skills.programming">Python, C ve C++</li>
+                                            <li data-i18n="skills.matlab">MATLAB/Simulink</li>
+                                            <li data-i18n="skills.algorithms">Algoritmalar ve Veri Yapıları</li>
+                                            <li data-i18n="skills.embedded">Gömülü Sistemler</li>
+                                            <li data-i18n="skills.digitalLogic">Dijital Lojik ve FSM Tasarımı</li>
+                                            <li data-i18n="skills.circuitAnalysis">Devre Analizi ve Ölçüm</li>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="common/js/jquery-features.js"></script>
+<script src="common/js/index.js"></script>
+<script src="common/js/i18n.js"></script>
+</body>
+</html>
+
+
